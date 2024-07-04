@@ -17,3 +17,15 @@ password: admin
 username: duongmanhnguyen
 password: $2b$10$CyWPS5ik9G3cxte.fWTjm.l1P5BSbkI0wC4RH9PdqxtkBfkulelJK
 ```
+
+- Docker
+
+```bash
+docker-compose up
+```
+
+- or prefer to run in background (detach)
+
+```bash
+docker-compose up -d
+```
