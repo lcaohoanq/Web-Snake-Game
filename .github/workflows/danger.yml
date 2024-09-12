@@ -1,14 +1,20 @@
 name: Danger js
-on: [pull_request]
+
+on:
+  push:
+    branches: [ "develop" ]
+
 jobs:
   danger:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master # này là checkout code về máy
-      - name: Use Node.js 18.x # sử dụng nodejs phiên bản 18.x
+      - uses: actions/checkout@master
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+      - name: Install dependencies
+      - run: npm install
       - name: Danger
         run: npx danger ci
         env:
