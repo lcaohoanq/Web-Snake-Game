@@ -1,4 +1,4 @@
-import { FoodType, SnakeType } from '../../models/game.models';
+import { FoodType, SnakeType } from '../../schemas/game.models';
 
 export function initBox(size: number): number {
   return size;

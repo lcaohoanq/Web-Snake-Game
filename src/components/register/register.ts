@@ -1,6 +1,6 @@
 import Swal from 'sweetalert2';
-import { AccountType } from '../../models/account.model';
-import { FormData } from '../../models/validForm';
+import { AccountType } from '../../schemas/account.model';
+import { FormData } from '../../schemas/validForm';
 import { getAccounts } from '../../util/account';
 import { clearMsg, isRequired, isSame, isValid, max, min } from '../../util/formValidate';
 document.addEventListener('DOMContentLoaded', () => {
