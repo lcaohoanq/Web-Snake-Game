@@ -1,4 +1,4 @@
-import { AccountType } from '../models/account.model';
+import { AccountType } from '../schemas/account.model';
 
 export function getAccounts(): AccountType[] {
   const accounts = localStorage.getItem('accounts')!;

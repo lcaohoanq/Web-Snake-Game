@@ -1,8 +1,8 @@
 import Swal from 'sweetalert2';
-import { LoginFormModel } from '../../models/loginModel';
-import { FormData } from '../../models/validForm';
+import { FormData } from '../../schemas/validForm';
 import { getAccounts } from '../../util/account';
 import { clearMsg, isRequired, isValid } from '../../util/formValidate';
+import { LoginFormModel } from '../../models/login.model';
 
 document.addEventListener('DOMContentLoaded', () => {
   const formLogin = document.querySelector('#loginForm')! as HTMLFormElement;

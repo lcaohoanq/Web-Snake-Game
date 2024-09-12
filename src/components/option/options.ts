@@ -1,4 +1,4 @@
-import { modesList } from '../../models/options.models';
+import { modesList } from '../../schemas/options.models';
 import { playIntroSound } from '../../util/game/soundEffects';
 
 document.addEventListener('DOMContentLoaded', () => {

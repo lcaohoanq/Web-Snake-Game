@@ -7,6 +7,16 @@
   "scripts": {
     "compile:sass": "node-sass src/sass/main.scss src/styles/style.css -w",
     "dev": "cross-env NODE_ENV=development npx nodemon",
+    "prepare": "husky",
+    "lint": "npm run prettier:fix && npm run eslint:check && npm run check-types",
+    "prettier:check": "prettier --check . --cache",
+    "prettier:fix": "prettier --write . --cache",
+    "eslint:fix": "eslint --fix ./src --ext .ts,.tsx,.js,.jsx --max-warnings 0",
+    "eslint:check": "eslint ./src --ext .ts,.tsx,.js,.jsx --report-unused-disable-directives --max-warnings 0",
+    "eslint:debug": "eslint ./src --debug --ext .ts,.tsx,.js,.jsx --max-warnings 0",
+    "eslint:check-allow-warning": "eslint --quiet ./src --ext .ts,.tsx,.js,.jsx",
+    "check-conflict-prettier-eslint": "npx eslint-config-prettier src/App.tsx --print-config",
+    "check-types": "tsc --noemit",
     "server": "lite-server",
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
@@ -31,7 +41,8 @@
     "mini-css-extract-plugin": "^2.8.1",
     "node-sass": "^9.0.0",
     "sweetalert2": "^11.10.8",
-    "workbox-webpack-plugin": "^7.0.0"
+    "workbox-webpack-plugin": "^7.0.0",
+    "husky": "^9.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
